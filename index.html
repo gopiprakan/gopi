@@ -1,133 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animated Login Page</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: linear-gradient(45deg, #f86060, #f5f7fa, #48c6ef);
-            background-size: 300% 300%;
-            animation: gradient 10s ease infinite;
-        }
-
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .container {
-            position: relative;
-            width: 300px;
-            height: 400px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            overflow: hidden;
-        }
-
-        .login-box {
-            position: absolute;
-            inset: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: #11d6e4;
-            padding: 20px;
-        }
-
-        .login-box h2 {
-            margin-bottom: 20px;
-            font-size: 24px;
-            font-weight: 600;
-        }
-
-        .input-box {
-            position: relative;
-            width: 100%;
-            margin-bottom: 30px;
-        }
-
-        .input-box input {
-            width: 100%;
-            padding: 10px;
-            background: transparent;
-            border: none;
-            border-bottom: 2px solid #000000;
-            color: #000000;
-            font-size: 16px;
-            outline: none;
-            transition: 0.5s;
-        }
-
-        .input-box label {
-            position: absolute;
-            top: 0;
-            left: 0;
-            padding: 10px 0;
-            pointer-events: none;
-            font-size: 16px;
-            color: #000000;
-            transition: 0.5s;
-        }
-
-        .input-box input:focus ~ label,
-        .input-box input:valid ~ label {
-            top: -20px;
-            left: 0;
-            color: #48c6ef;
-            font-size: 12px;
-        }
-
-        button {
-            background: #48c6ef;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            color: #ffffff;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        button:hover {
-            background: #ff6b6b;
-        }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-    <div class="container">
-        <div class="login-box">
-            <h2>Login</h2>
-            <form>
-                <div class="input-box">
-                    <input type="text" required>
-                    <label>Username</label>
-                </div>
-                <div class="input-box">
-                    <input type="password" required>
-                    <label>Password</label>
-                </div>
-                <button type="submit">Login</button>
-            </form>
-        </div>
-    </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            // Add any additional JavaScript functionality here
-        });
-    </script>
-</body>
-</html>
 
+<body>
+    <div class="frame">
+        <div class="login">Login</div>
+        <div class="email">
+            <input type="text" placeholder="Username" />
+            <img src="user.png" width="23px" />
+        </div>
+        <div class="password">
+            <input type="password" placeholder="Password" />
+            <img src="padlock.png" width="23px" />
+        </div>
+        <div class="remember_forgot">
+            <div class="remember">
+                <input type="checkbox" id="check" />
+                <label for="charset">Remember Me</label>
+            </div>
+            <div class="forgot"><a href="#">Forgot password?</a></div>
+        </div>
+        <button class="log">Login</button>
+        <div class="reg"></div>
+        Don't have an account?<a href="#">Register</a>
+    </div>
+    </div>
+</body>
+
+</html>
