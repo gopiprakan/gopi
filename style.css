@@ -16,6 +16,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    animation: fadeIn 2s ease-in-out;
 }
 
 body:before {
@@ -24,6 +25,15 @@ body:before {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.164);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .frame {
@@ -36,6 +46,18 @@ body:before {
     align-items: center;
     border-radius: 10px;
     box-shadow: 0px 0px 5px white;
+    animation: slideIn 1.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .login {
@@ -44,6 +66,16 @@ body:before {
     color: white;
     margin-top: 0.5rem;
     margin-bottom: 2.5rem;
+    animation: textFadeIn 2s ease-in-out;
+}
+
+@keyframes textFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .email,
@@ -54,6 +86,7 @@ body:before {
     align-items: center;
     margin: 0.5rem;
     position: relative;
+    animation: inputFadeIn 2s ease-in-out;
 }
 
 .email input,
@@ -67,6 +100,16 @@ body:before {
     font-size: 17px;
     outline: none;
     font-weight: bold;
+    animation: inputFadeIn 2s ease-in-out;
+}
+
+@keyframes inputFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .email input::placeholder,
@@ -79,6 +122,16 @@ body:before {
 .password img {
     position: absolute;
     right: 0.7rem;
+    animation: iconFadeIn 2s ease-in-out;
+}
+
+@keyframes iconFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .remember_forgot {
@@ -88,6 +141,7 @@ body:before {
     align-items: center;
     justify-content: space-between;
     margin-top: 0.5rem;
+    animation: textFadeIn 2s ease-in-out;
 }
 
 .remember_forgot .remember {
@@ -123,14 +177,25 @@ body:before {
     border: none;
     border-radius: 50px;
     cursor: pointer;
+    animation: buttonFadeIn 1s ease-in-out;
+}
+
+@keyframes buttonFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .reg {
     margin-top: 1.5rem;
-    color: white;
+    color: rgb(255, 255, 255);
+    animation: textFadeIn 5s ease-in-out;
 }
 
 .reg a {
     font-weight: bold;
-    color: white;
+    color: rgb(221, 219, 219);
 }
